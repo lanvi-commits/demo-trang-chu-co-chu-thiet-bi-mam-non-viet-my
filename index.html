@@ -448,7 +448,11 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 --text_color:#6E737E;
             }
         </style>
-    
+    <style id="vmx-seo">
+/* heading SEO 20/10: thẻ mới không được đổi giao diện */
+.category_products .tab-heading{margin:0;padding:0;flex:0 0 auto;display:flex;font:inherit;line-height:inherit;color:inherit;text-wrap:initial}
+</style>
+
 <!-- MOCKUP 16/10/2026 — Trang chủ Việt Mỹ (site THC) + thang cỡ chữ đề xuất.
      Dựng bằng nguyen-lieu/2026-10-16_trang-chu-co-chu-build/build.py — ĐỪNG sửa tay file này.
      CSS của site đã nhúng (chụp 16/10). JS + ảnh tải từ website-demo-02 → cần mạng. -->
@@ -3132,7 +3136,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">[Có dù | Lan can] Đu quay mâm không ray ghế hình các con thú đa dạng</h3>
+			<h4 class="woocommerce-loop-product__title product-name">[Có dù | Lan can] Đu quay mâm không ray ghế hình các con thú đa dạng</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -3187,7 +3191,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">[Nhập khẩu] Kệ nhựa 3 tầng để đồ chơi hình Minion | Doraemon | Hello Kitty cho trẻ</h3>
+			<h4 class="woocommerce-loop-product__title product-name">[Nhập khẩu] Kệ nhựa 3 tầng để đồ chơi hình Minion | Doraemon | Hello Kitty cho trẻ</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -3242,7 +3246,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">[Đa dạng màu sắc] Đồ chơi ném vòng mẫu Thỏ con cầm cà rốt cho bé mẫu giáo vui chơi</h3>
+			<h4 class="woocommerce-loop-product__title product-name">[Đa dạng màu sắc] Đồ chơi ném vòng mẫu Thỏ con cầm cà rốt cho bé mẫu giáo vui chơi</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -3297,7 +3301,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">[Nhập khẩu] Kệ nhựa 3 tầng để đồ chơi với hình các nhân vật hoạt hình dễ thương</h3>
+			<h4 class="woocommerce-loop-product__title product-name">[Nhập khẩu] Kệ nhựa 3 tầng để đồ chơi với hình các nhân vật hoạt hình dễ thương</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -3352,7 +3356,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Bàn chơi cát nước ngoài trời cỡ lớn 3 tầng</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Bàn chơi cát nước ngoài trời cỡ lớn 3 tầng</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -3407,7 +3411,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Bàn chơi cát và nước Khu vườn cổ tích [Kèm phụ kiện]</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Bàn chơi cát và nước Khu vườn cổ tích [Kèm phụ kiện]</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -3506,21 +3510,21 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 						<button type="button" class="tab is-active" data-term="all">
 							<span class="tab-text">Tất cả</span>
 						</button>
-													<button
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="151"
 															>
 								<span class="tab-text">Bập bênh ngoài trời</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="138"
 															>
 								<span class="tab-text">Bập bênh nhựa cho bé</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab has-tooltip"
 								data-term="158"
@@ -3532,22 +3536,22 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 										role="tooltip"
 									>
 										Bạt nhún - Leo núi — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="52"
 															>
 								<span class="tab-text">Bộ dụng cụ thể dục nhẹ</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="31"
 															>
 								<span class="tab-text">Bóng &amp; vòng ném</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab has-tooltip"
 								data-term="159"
@@ -3559,189 +3563,189 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 										role="tooltip"
 									>
 										Bóng rổ, khung thành cho bé — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="54"
 															>
 								<span class="tab-text">Bóng yoga trẻ em</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="176"
 															>
 								<span class="tab-text">Cầu thăng bằng mầm non</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="139"
 															>
 								<span class="tab-text">Cầu trượt cho bé</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="153"
 															>
 								<span class="tab-text">Cầu trượt liên hoàn ngoài trời</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="30"
 															>
 								<span class="tab-text">Cầu trượt trong nhà</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="140"
 															>
 								<span class="tab-text">Cầu trượt xích đu</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="53"
 															>
 								<span class="tab-text">Đồ chơi leo trèo trong nhà</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="175"
 															>
 								<span class="tab-text">Đồ chơi tập gym trẻ em</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="157"
 															>
 								<span class="tab-text">Đồ chơi vận động khác</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="143"
 															>
 								<span class="tab-text">Đu quay mầm non</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="56"
 															>
 								<span class="tab-text">Gậy vận động mềm</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="154"
 															>
 								<span class="tab-text">Hang chui - Cung chui</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="142"
 															>
 								<span class="tab-text">Nhà banh cho bé</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="39"
 															>
 								<span class="tab-text">Nhà liên hoàn</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="29"
 															>
 								<span class="tab-text">Nhảy dây &amp; vận động tay</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="49"
 															>
 								<span class="tab-text">Nhún chân vận động</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="55"
 															>
 								<span class="tab-text">Thảm nhảy số học</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="51"
 															>
 								<span class="tab-text">Thảm vận động đa năng</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="144"
 															>
 								<span class="tab-text">Thang leo mầm non</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="177"
 															>
 								<span class="tab-text">Thú ném</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="152"
 															>
 								<span class="tab-text">Thú nhún lò xo</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="50"
 															>
 								<span class="tab-text">Vòng xoay cân bằng</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="155"
 															>
 								<span class="tab-text">Xe chòi chân</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="156"
 															>
 								<span class="tab-text">Xe đạp 3 bánh</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="32"
 															>
 								<span class="tab-text">Xe đạp thăng bằng</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="141"
 															>
 								<span class="tab-text">Xích đu mầm non</span>
-															</button>
+															</button></h3>
 											</div>
 				</div>
 				<div class="nav">
@@ -3776,7 +3780,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Hang chui hình Con Kiến đáng yêu cho bé</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Hang chui hình Con Kiến đáng yêu cho bé</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -3831,7 +3835,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Cầu trượt đơn Voi Con máng gợn sóng tích hợp bóng rổ</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Cầu trượt đơn Voi Con máng gợn sóng tích hợp bóng rổ</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -3886,7 +3890,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Cầu trượt đơn Gấu máng gợn sóng tích hợp bóng rổ</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Cầu trượt đơn Gấu máng gợn sóng tích hợp bóng rổ</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -3941,7 +3945,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Bộ cầu trượt composite máng cao &#8211; máng thấp cho bé</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Bộ cầu trượt composite máng cao &#8211; máng thấp cho bé</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -3996,7 +4000,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Cầu trượt đơn Con Ốc liền khối [Có hang chui, vách leo núi]</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Cầu trượt đơn Con Ốc liền khối [Có hang chui, vách leo núi]</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -4051,7 +4055,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Cầu trượt đơn Con Sâu nhựa đúc nguyên khối, tích hợp với hang chui, vách leo núi</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Cầu trượt đơn Con Sâu nhựa đúc nguyên khối, tích hợp với hang chui, vách leo núi</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -4106,7 +4110,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Nhà nhún trampoline vuông có lưới quây cho trẻ mầm non</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Nhà nhún trampoline vuông có lưới quây cho trẻ mầm non</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -4164,7 +4168,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Sàn nhún trampoline lớn có lưới quây cho trẻ</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Sàn nhún trampoline lớn có lưới quây cho trẻ</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -4222,7 +4226,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Sàn nhún trampoline mini nhập khẩu cho bé bật nhảy</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Sàn nhún trampoline mini nhập khẩu cho bé bật nhảy</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -4280,7 +4284,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Bộ vận động đa năng 3IN1 [leo núi, cầu trượt, hang chui] cho trẻ tha hồ vui chơi | Đa dạng mẫu mã]</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Bộ vận động đa năng 3IN1 [leo núi, cầu trượt, hang chui] cho trẻ tha hồ vui chơi | Đa dạng mẫu mã]</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -4350,132 +4354,132 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 						<button type="button" class="tab is-active" data-term="all">
 							<span class="tab-text">Tất cả</span>
 						</button>
-													<button
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="164"
 															>
 								<span class="tab-text">Bàn ghế mầm non</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="85"
 															>
 								<span class="tab-text">Bàn giáo viên</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="167"
 															>
 								<span class="tab-text">Bảng biểu mầm non</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="89"
 															>
 								<span class="tab-text">Bảng treo tường từ tính</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="172"
 															>
 								<span class="tab-text">Bục sàn sân khấu</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="86"
 															>
 								<span class="tab-text">Ghế ngồi vòng tròn</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="168"
 															>
 								<span class="tab-text">Giá khăn phơi, tủ chải, tủ ly</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="171"
 															>
 								<span class="tab-text">Giá vẽ, bảng quay</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="166"
 															>
 								<span class="tab-text">Giường mầm non</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="83"
 															>
 								<span class="tab-text">Góc đọc sách thư viện</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="88"
 															>
 								<span class="tab-text">Kệ góc nghệ thuật</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="173"
 															>
 								<span class="tab-text">Thảm xốp, thảm cỏ nhân tạo</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="169"
 															>
 								<span class="tab-text">Thùng rác mầm non</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="84"
 															>
 								<span class="tab-text">Tủ đựng cặp</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="165"
 															>
 								<span class="tab-text">Tủ kệ mầm non</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="87"
 															>
 								<span class="tab-text">Tủ ngăn học liệu</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="174"
 															>
 								<span class="tab-text">Tượng vườn cổ tích mầm non</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab"
 								data-term="170"
 															>
 								<span class="tab-text">Vách ngăn vệ sinh</span>
-															</button>
+															</button></h3>
 											</div>
 				</div>
 				<div class="nav">
@@ -4510,7 +4514,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Giường y tế gỗ MFC cho trường mầm non [Bao gồm nệm]</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Giường y tế gỗ MFC cho trường mầm non [Bao gồm nệm]</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -4568,7 +4572,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Tủ úp ca, cốc bằng nhôm kính và mica chắc chắn cho nhà trẻ, lớp học</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Tủ úp ca, cốc bằng nhôm kính và mica chắc chắn cho nhà trẻ, lớp học</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -4626,7 +4630,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Bồn rửa tay, rửa chén inox cho trường học</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Bồn rửa tay, rửa chén inox cho trường học</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -4684,7 +4688,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Tượng cặp Hươu sao composite</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Tượng cặp Hươu sao composite</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -4742,7 +4746,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Giường ngủ lưới hình Doreamon | Mickey [Chân xanh] cho trẻ mẫu giáo chất lượng tốt</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Giường ngủ lưới hình Doreamon | Mickey [Chân xanh] cho trẻ mẫu giáo chất lượng tốt</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -4800,7 +4804,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Giường ngủ lưới hình Doreamon | Mickey [Chân đỏ] cho bé mẫu giáo giá rẻ</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Giường ngủ lưới hình Doreamon | Mickey [Chân đỏ] cho bé mẫu giáo giá rẻ</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -4858,7 +4862,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Giường ngủ King vải lưới thoáng mát [Chân xanh] cho trẻ mầm non | Đa dạng kích thước tùy vào nhu cầu của trường</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Giường ngủ King vải lưới thoáng mát [Chân xanh] cho trẻ mầm non | Đa dạng kích thước tùy vào nhu cầu của trường</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -4916,7 +4920,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Giường vải lưới King 1M2 x 0,6M xanh lá cho trường mầm non</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Giường vải lưới King 1M2 x 0,6M xanh lá cho trường mầm non</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -4974,7 +4978,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Giường ngủ lưới King màu hồng cho bé mẫu giáo | Loại tiêu chuẩn 1M2 x 0,6M</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Giường ngủ lưới King màu hồng cho bé mẫu giáo | Loại tiêu chuẩn 1M2 x 0,6M</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -5032,7 +5036,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Giường ngủ lưới King [Chân đỏ] cho trẻ mầm non chất lượng tốt, giá cạnh tranh [Nhiều kích thước]</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Giường ngủ lưới King [Chân đỏ] cho trẻ mầm non chất lượng tốt, giá cạnh tranh [Nhiều kích thước]</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -5102,7 +5106,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 						<button type="button" class="tab is-active" data-term="all">
 							<span class="tab-text">Tất cả</span>
 						</button>
-													<button
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab has-tooltip"
 								data-term="117"
@@ -5114,8 +5118,8 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 										role="tooltip"
 									>
 										Bộ Montessori nhập khẩu — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab has-tooltip"
 								data-term="122"
@@ -5127,8 +5131,8 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 										role="tooltip"
 									>
 										Bộ thí nghiệm nhập khẩu — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab has-tooltip"
 								data-term="120"
@@ -5140,8 +5144,8 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 										role="tooltip"
 									>
 										Búp bê giáo dục nhập khẩu — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab has-tooltip"
 								data-term="125"
@@ -5153,8 +5157,8 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 										role="tooltip"
 									>
 										Combo nhập khẩu cao cấp — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab has-tooltip"
 								data-term="121"
@@ -5166,8 +5170,8 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 										role="tooltip"
 									>
 										Đồ chơi âm nhạc nhập khẩu — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab has-tooltip"
 								data-term="118"
@@ -5179,8 +5183,8 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 										role="tooltip"
 									>
 										Đồ chơi cảm giác nhập khẩu — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab has-tooltip"
 								data-term="114"
@@ -5192,8 +5196,8 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 										role="tooltip"
 									>
 										Đồ chơi nhập khẩu châu Âu — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab has-tooltip"
 								data-term="116"
@@ -5205,8 +5209,8 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 										role="tooltip"
 									>
 										Đồ chơi nhập khẩu Hàn Quốc — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab has-tooltip"
 								data-term="115"
@@ -5218,8 +5222,8 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 										role="tooltip"
 									>
 										Đồ chơi nhập khẩu Nhật Bản — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab has-tooltip"
 								data-term="124"
@@ -5231,8 +5235,8 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 										role="tooltip"
 									>
 										Đồ chơi sáng tạo nhập khẩu — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab has-tooltip"
 								data-term="119"
@@ -5244,8 +5248,8 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 										role="tooltip"
 									>
 										Đồ chơi STEM nhập khẩu — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
-															</button>
-													<button
+															</button></h3>
+													<h3 class="tab-heading"><button
 								type="button"
 								class="tab has-tooltip"
 								data-term="123"
@@ -5257,7 +5261,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 										role="tooltip"
 									>
 										Đồ chơi vận động nhập khẩu — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
-															</button>
+															</button></h3>
 											</div>
 				</div>
 				<div class="nav">
@@ -5292,7 +5296,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Sàn nhún trampoline mini nhập khẩu cho bé bật nhảy</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Sàn nhún trampoline mini nhập khẩu cho bé bật nhảy</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -5350,7 +5354,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Thang leo vận động hình Kim Tự Tháp nhập khẩu cho trẻ mầm non</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Thang leo vận động hình Kim Tự Tháp nhập khẩu cho trẻ mầm non</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -5408,7 +5412,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Thang leo núi xoắn 3 nhánh nhập khẩu cho bé mẫu giáo vận động</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Thang leo núi xoắn 3 nhánh nhập khẩu cho bé mẫu giáo vận động</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -5466,7 +5470,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Giá vẽ Khủng Long kiêm bảng viết tự điều chỉnh độ cao cho trẻ mầm non [nhập khẩu]</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Giá vẽ Khủng Long kiêm bảng viết tự điều chỉnh độ cao cho trẻ mầm non [nhập khẩu]</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -5524,7 +5528,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Bộ bàn ghế tai thỏ chơi lego kiêm giá vẽ đa năng cho bé mầm non | Có giá để đồ chơi [Nhập khẩu]</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Bộ bàn ghế tai thỏ chơi lego kiêm giá vẽ đa năng cho bé mầm non | Có giá để đồ chơi [Nhập khẩu]</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -5582,7 +5586,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Sàn bục sân khấu nhựa nhập khẩu, lắp ghép nhanh chóng cho trường mầm non</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Sàn bục sân khấu nhựa nhập khẩu, lắp ghép nhanh chóng cho trường mầm non</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -5640,7 +5644,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Giá phơi khăn mặt con Hươu Cao Cổ cho trường mầm non [Nhập khẩu]</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Giá phơi khăn mặt con Hươu Cao Cổ cho trường mầm non [Nhập khẩu]</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -5698,7 +5702,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Kệ nhựa nhập khẩu 3 tầng 7 ngăn rộng rãi, cao cấp</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Kệ nhựa nhập khẩu 3 tầng 7 ngăn rộng rãi, cao cấp</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -5756,7 +5760,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">[Nhập khẩu] Kệ nhựa 3 tầng để đồ chơi với hình các nhân vật hoạt hình dễ thương</h3>
+			<h4 class="woocommerce-loop-product__title product-name">[Nhập khẩu] Kệ nhựa 3 tầng để đồ chơi với hình các nhân vật hoạt hình dễ thương</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
@@ -5814,7 +5818,7 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 		</div>
 
 		<div class="info">
-			<h3 class="woocommerce-loop-product__title product-name">Giá để đồ chơi 4 tầng hình Gấu kèm với 2 kệ đựng sách size lớn [Nhập khẩu]</h3>
+			<h4 class="woocommerce-loop-product__title product-name">Giá để đồ chơi 4 tầng hình Gấu kèm với 2 kệ đựng sách size lớn [Nhập khẩu]</h4>
 			<div class="price">
 													<span class="price-sale price-contact">Giá: Liên hệ</span>
 							</div>
