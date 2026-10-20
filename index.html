@@ -458,14 +458,14 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
      CSS của site đã nhúng (chụp 16/10). JS + ảnh tải từ website-demo-02 → cần mạng. -->
 <style id="vmx-scale" media="all">
 /* ==== THANG CỠ CHỮ ĐỀ XUẤT — Việt Mỹ (site THC, theme thcmedia-atlas) ====
-   8 bậc: 12 · 14 · 16 · 18 · 20 · 24 · 28 · 36    |   3 độ đậm: 400 · 600 · 700
+   8 bậc: 12 · 14 · 16 · 18 · 20 · 22 · 28 · 36   (20/10: user thay 24 bằng 22)    |   3 độ đậm: 400 · 600 · 700
    Desktop ≥768px dùng giá trị trong :root, mobile <768px dùng khối @media.
    File này dùng !important để ÁP THỬ lên site thật. Khi làm thật: sửa thẳng các rule gốc
    trong CSS theme sang var(--fs-*), không cần !important.                                  */
 :root {
   --fs-h1: 36px;    /* H1 mọi trang                                     | mobile 28 */
-  --fs-h2: 28px;    /* H2 tiêu đề section (.title-thc), số liệu, giá PDP | mobile 24 */
-  --fs-h3: 24px;    /* H1 trang sản phẩm, H2 trong bài viết, panel lớn   | mobile 20 */
+  --fs-h2: 28px;    /* H2 tiêu đề section (.title-thc), số liệu, giá PDP | mobile 22 */
+  --fs-h3: 22px;    /* tên dự án, H1 trang SP, H2 trong bài viết, panel  | mobile 20 */
   --fs-h4: 20px;    /* H3 trong bài viết, tiêu đề card lớn (2–3 card/hàng)| mobile 18 */
   --fs-title: 18px; /* tiêu đề card, tên người, câu hỏi FAQ              | mobile 16 */
   --fs-body: 16px;  /* đoạn văn, nút chính                               | 16 */
@@ -475,7 +475,7 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
   --c-text: #111927;   /* 1 màu cho heading + chữ chính (thay #0A1D3B, #00194C, #000) */
 }
 @media (max-width: 767px) {
-  :root { --fs-h1: 28px; --fs-h2: 24px; --fs-h3: 20px; --fs-h4: 18px; --fs-title: 16px; }
+  :root { --fs-h1: 28px; --fs-h2: 22px; --fs-h3: 20px; --fs-h4: 18px; --fs-title: 16px; }
 }
 
 /* ---------- 1. Heading ---------- */
@@ -485,7 +485,7 @@ h1.title-thc, #hero_catalog_banner .titles .title-thc
 h2.title-thc { font-size: var(--fs-h2) !important; font-weight: 700 !important; line-height: var(--lh-heading) !important; }
 h1.product-title { font-size: var(--fs-h3) !important; font-weight: 700 !important; line-height: 1.3 !important; }
 h2.panel-title { font-size: var(--fs-h3) !important; font-weight: 700 !important; }
-.card-project .card-title { font-size: var(--fs-h3) !important; font-weight: 700 !important; line-height: 1.3 !important; }   /* tên dự án là thẻ <h3> → cỡ H3 (user chốt 20/10); card dùng chung: trang chủ, Giới thiệu, Dự án, chi tiết dự án */
+.card-project .card-title { font-size: var(--fs-h3) !important; font-weight: 700 !important; line-height: 1.3 !important; }   /* tên dự án là thẻ <h3> → 22 desktop / 18 mobile (user chốt 20/10); card dùng chung: trang chủ, Giới thiệu, Dự án, chi tiết dự án */
 h3.panel-title, h2.form-title { font-size: var(--fs-h4) !important; font-weight: 700 !important; }
 .entry-content h2, #ftwp-postcontent h2 { font-size: var(--fs-h3) !important; font-weight: 700 !important; line-height: 1.3 !important; }
 .entry-content h3, #ftwp-postcontent h3 { font-size: var(--fs-h4) !important; font-weight: 700 !important; line-height: 1.35 !important; }
@@ -516,14 +516,15 @@ h1, h2, h3 { text-wrap: balance; }   /* tránh 1 chữ rơi xuống dòng cuối
 .trust_banner .item-title, .commitment-title, .box-title, .project-title, .qty-label { font-size: var(--fs-body) !important; font-weight: 700 !important; }
 
 /* ---------- 4. Card sản phẩm (dòng 50: "Liên hệ" không được to hơn tên SP) ---------- */
-/* tên SP là thẻ <h4> → cỡ H4 20/18 (user chốt 20/10, thay cho 14 bằng giá) */
-.woocommerce-loop-product__title { font-size: var(--fs-h4) !important; font-weight: 700 !important; line-height: 1.35 !important; }
+/* tên SP là thẻ <h4>, cỡ Tiêu đề nhỏ 18/16 (user chốt 20/10) */
+.woocommerce-loop-product__title { font-size: var(--fs-title) !important; font-weight: 700 !important; line-height: var(--lh-title) !important; }
 /* responsive.css của theme ép 12px !important ở mobile bằng selector 2 class → phải cùng độ cụ thể mới đè được */
 .product-card-wrapper .woocommerce-loop-product__title, .product-card-wrapper .product-name
-  { font-size: var(--fs-h4) !important; line-height: 1.35 !important; min-height: calc(var(--fs-h4) * 1.35 * 2) !important; }
+  { font-size: var(--fs-title) !important; line-height: var(--lh-title) !important; min-height: calc(var(--fs-title) * 1.4 * 2) !important; }
 .product-card .price, .product-card .price * { font-size: var(--fs-sm) !important; line-height: 1.45 !important; }
 .product-card .actions button, .product-card .actions button span { font-size: var(--fs-sm) !important; }
 @media (max-width: 767px) {
+  .card-project .card-title { font-size: var(--fs-h4) !important; }   /* tên dự án mobile 18 (H3 mobile là 20) */
   .product-card .actions button, .product-card .actions button span { font-size: var(--fs-xs) !important; }
   /* nút đứng cặp đôi ở trang SP: cả 4 nút cùng 14 trên mobile (hiện 2 nút 14, 2 nút 16) */
   .cart-buttons button, .cart-buttons button span, .project-actions a, .project-actions button, .project-actions span { font-size: var(--fs-sm) !important; }
@@ -7893,7 +7894,7 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
     <details>
       <summary>Ghi chú</summary>
       <ul>
-        <li>Thang 8 cỡ: 12 · 14 · 16 · 18 · 20 · 24 · 28 · 36. Mobile lùi 1 bậc. Chip xanh = đúng thang, đỏ = ngoài thang.</li>
+        <li>Thang 8 cỡ: 12 · 14 · 16 · 18 · 20 · 22 · 28 · 36. Mobile lùi 1 bậc. Chip xanh = đúng thang, đỏ = ngoài thang.</li>
         <li>"Đề xuất" đổi chữ tiêu đề hero và slogan theo dòng 29 tab Review tổng thể (bỏ "tốt nhất:", bỏ "nhất").</li>
         <li>CSS của site chụp ngày 16/10/2026. Ảnh và JS tải từ website-demo-02 nên cần mạng.</li>
         <li>"Xem nhanh", "Thêm vào báo giá" cần máy chủ nên không chạy trong file này.</li>
@@ -7917,7 +7918,7 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
   var scale = document.getElementById('vmx-scale');
   var panel = document.getElementById('vmx-panel');
   var KEY = 'vmx-type-mode';
-  var SCALE = [12, 14, 16, 18, 20, 24, 28, 36];
+  var SCALE = [12, 14, 16, 18, 20, 22, 28, 36];
   var hash = location.hash || '';
   var inFrame = hash.indexOf('#vmx-frame') === 0 || window.self !== window.top;
   if (inFrame) root.classList.add('vmx-in-frame');
@@ -8004,8 +8005,8 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
   var inspect = document.getElementById('vmx-inspect'), raf = 0, last = null;
   function tokenName(px) {
     var mob = innerWidth < 768;
-    var d = { 36: 'H1', 28: 'H2', 24: 'H3', 20: 'H4', 18: 'Tiêu đề card', 16: 'Thường', 14: 'Nhỏ', 12: 'Nhỏ nhất' };
-    var mm = { 28: 'H1', 24: 'H2', 20: 'H3', 18: 'H4', 16: 'Tiêu đề card · Thường', 14: 'Nhỏ', 12: 'Nhỏ nhất' };
+    var d = { 36: 'H1', 28: 'H2', 22: 'H3', 20: 'H4', 18: 'Tiêu đề card', 16: 'Thường', 14: 'Nhỏ', 12: 'Nhỏ nhất' };
+    var mm = { 28: 'H1', 22: 'H2', 20: 'H3', 18: 'H4', 16: 'Tiêu đề card · Thường', 14: 'Nhỏ', 12: 'Nhỏ nhất' };
     return (mob ? mm : d)[px] || '';
   }
   function textTarget(el) {
