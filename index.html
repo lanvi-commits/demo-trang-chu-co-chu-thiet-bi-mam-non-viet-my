@@ -485,6 +485,7 @@ h1.title-thc, #hero_catalog_banner .titles .title-thc
 h2.title-thc { font-size: var(--fs-h2) !important; font-weight: 700 !important; line-height: var(--lh-heading) !important; }
 h1.product-title { font-size: var(--fs-h3) !important; font-weight: 700 !important; line-height: 1.3 !important; }
 h2.panel-title { font-size: var(--fs-h3) !important; font-weight: 700 !important; }
+.card-project .card-title { font-size: var(--fs-h3) !important; font-weight: 700 !important; line-height: 1.3 !important; }   /* tên dự án là thẻ <h3> → cỡ H3 (user chốt 20/10); card dùng chung: trang chủ, Giới thiệu, Dự án, chi tiết dự án */
 h3.panel-title, h2.form-title { font-size: var(--fs-h4) !important; font-weight: 700 !important; }
 .entry-content h2, #ftwp-postcontent h2 { font-size: var(--fs-h3) !important; font-weight: 700 !important; line-height: 1.3 !important; }
 .entry-content h3, #ftwp-postcontent h3 { font-size: var(--fs-h4) !important; font-weight: 700 !important; line-height: 1.35 !important; }
@@ -502,7 +503,7 @@ h1, h2, h3 { text-wrap: balance; }   /* tránh 1 chữ rơi xuống dòng cuối
 #featured_projects .header .desc, #consultant_team .header .desc, #standards_promo .card-desc { color: #fff !important; }
 
 /* ---------- 3. Tiêu đề card ---------- */
-#shop_category_groups .card .label, .card-project .card-title, .card-title-link .title-post, .standards_promo .card-title,
+#shop_category_groups .card .label, .card-title-link .title-post, .standards_promo .card-title,
 #about_intro .item-title, .card-employee .name, .customer_testimonials .name, .project_reviews .name, .knowledge_posts .item--row .post-title,
 .faq-item .question, .exp-title, article.member h3.name, article.commit h3.name, .steps .name, .project_products .card-title,
 #equipment_banner .subtitle, .estimate-title, .author-box__name
@@ -514,11 +515,12 @@ h1, h2, h3 { text-wrap: balance; }   /* tránh 1 chữ rơi xuống dòng cuối
 .ceo-card .name { font-size: var(--fs-h2) !important; }
 .trust_banner .item-title, .commitment-title, .box-title, .project-title, .qty-label { font-size: var(--fs-body) !important; font-weight: 700 !important; }
 
-/* ---------- 4. Card sản phẩm (dòng 50: "Liên hệ" bằng cỡ tên SP) ---------- */
-.woocommerce-loop-product__title { font-size: var(--fs-sm) !important; font-weight: 600 !important; line-height: 1.45 !important; }
+/* ---------- 4. Card sản phẩm (dòng 50: "Liên hệ" không được to hơn tên SP) ---------- */
+/* tên SP là thẻ <h4> → cỡ H4 20/18 (user chốt 20/10, thay cho 14 bằng giá) */
+.woocommerce-loop-product__title { font-size: var(--fs-h4) !important; font-weight: 700 !important; line-height: 1.35 !important; }
 /* responsive.css của theme ép 12px !important ở mobile bằng selector 2 class → phải cùng độ cụ thể mới đè được */
 .product-card-wrapper .woocommerce-loop-product__title, .product-card-wrapper .product-name
-  { font-size: var(--fs-sm) !important; line-height: 1.45 !important; min-height: calc(var(--fs-sm) * 1.45 * 2) !important; }
+  { font-size: var(--fs-h4) !important; line-height: 1.35 !important; min-height: calc(var(--fs-h4) * 1.35 * 2) !important; }
 .product-card .price, .product-card .price * { font-size: var(--fs-sm) !important; line-height: 1.45 !important; }
 .product-card .actions button, .product-card .actions button span { font-size: var(--fs-sm) !important; }
 @media (max-width: 767px) {
@@ -3526,16 +3528,9 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 															</button></h3>
 													<h3 class="tab-heading"><button
 								type="button"
-								class="tab has-tooltip"
-								data-term="158"
-								aria-describedby="tab-tip-158"							>
+								class="tab"
+								data-term="158"							>
 								<span class="tab-text">Bạt nhún - Leo núi</span>
-																	<span
-										id="tab-tip-158"
-										class="feature-info__bubble tab-tooltip"
-										role="tooltip"
-									>
-										Bạt nhún - Leo núi — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
 															</button></h3>
 													<h3 class="tab-heading"><button
 								type="button"
@@ -3553,16 +3548,9 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 															</button></h3>
 													<h3 class="tab-heading"><button
 								type="button"
-								class="tab has-tooltip"
-								data-term="159"
-								aria-describedby="tab-tip-159"							>
+								class="tab"
+								data-term="159"							>
 								<span class="tab-text">Bóng rổ, khung thành cho bé</span>
-																	<span
-										id="tab-tip-159"
-										class="feature-info__bubble tab-tooltip"
-										role="tooltip"
-									>
-										Bóng rổ, khung thành cho bé — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
 															</button></h3>
 													<h3 class="tab-heading"><button
 								type="button"
@@ -5108,159 +5096,75 @@ html.vmx-in-frame #vmx-panel { display: none !important; }
 						</button>
 													<h3 class="tab-heading"><button
 								type="button"
-								class="tab has-tooltip"
-								data-term="117"
-								aria-describedby="tab-tip-117"							>
+								class="tab"
+								data-term="117"							>
 								<span class="tab-text">Bộ Montessori nhập khẩu</span>
-																	<span
-										id="tab-tip-117"
-										class="feature-info__bubble tab-tooltip"
-										role="tooltip"
-									>
-										Bộ Montessori nhập khẩu — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
 															</button></h3>
 													<h3 class="tab-heading"><button
 								type="button"
-								class="tab has-tooltip"
-								data-term="122"
-								aria-describedby="tab-tip-122"							>
+								class="tab"
+								data-term="122"							>
 								<span class="tab-text">Bộ thí nghiệm nhập khẩu</span>
-																	<span
-										id="tab-tip-122"
-										class="feature-info__bubble tab-tooltip"
-										role="tooltip"
-									>
-										Bộ thí nghiệm nhập khẩu — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
 															</button></h3>
 													<h3 class="tab-heading"><button
 								type="button"
-								class="tab has-tooltip"
-								data-term="120"
-								aria-describedby="tab-tip-120"							>
+								class="tab"
+								data-term="120"							>
 								<span class="tab-text">Búp bê giáo dục nhập khẩu</span>
-																	<span
-										id="tab-tip-120"
-										class="feature-info__bubble tab-tooltip"
-										role="tooltip"
-									>
-										Búp bê giáo dục nhập khẩu — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
 															</button></h3>
 													<h3 class="tab-heading"><button
 								type="button"
-								class="tab has-tooltip"
-								data-term="125"
-								aria-describedby="tab-tip-125"							>
+								class="tab"
+								data-term="125"							>
 								<span class="tab-text">Combo nhập khẩu cao cấp</span>
-																	<span
-										id="tab-tip-125"
-										class="feature-info__bubble tab-tooltip"
-										role="tooltip"
-									>
-										Combo nhập khẩu cao cấp — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
 															</button></h3>
 													<h3 class="tab-heading"><button
 								type="button"
-								class="tab has-tooltip"
-								data-term="121"
-								aria-describedby="tab-tip-121"							>
+								class="tab"
+								data-term="121"							>
 								<span class="tab-text">Đồ chơi âm nhạc nhập khẩu</span>
-																	<span
-										id="tab-tip-121"
-										class="feature-info__bubble tab-tooltip"
-										role="tooltip"
-									>
-										Đồ chơi âm nhạc nhập khẩu — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
 															</button></h3>
 													<h3 class="tab-heading"><button
 								type="button"
-								class="tab has-tooltip"
-								data-term="118"
-								aria-describedby="tab-tip-118"							>
+								class="tab"
+								data-term="118"							>
 								<span class="tab-text">Đồ chơi cảm giác nhập khẩu</span>
-																	<span
-										id="tab-tip-118"
-										class="feature-info__bubble tab-tooltip"
-										role="tooltip"
-									>
-										Đồ chơi cảm giác nhập khẩu — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
 															</button></h3>
 													<h3 class="tab-heading"><button
 								type="button"
-								class="tab has-tooltip"
-								data-term="114"
-								aria-describedby="tab-tip-114"							>
+								class="tab"
+								data-term="114"							>
 								<span class="tab-text">Đồ chơi nhập khẩu châu Âu</span>
-																	<span
-										id="tab-tip-114"
-										class="feature-info__bubble tab-tooltip"
-										role="tooltip"
-									>
-										Đồ chơi nhập khẩu châu Âu — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
 															</button></h3>
 													<h3 class="tab-heading"><button
 								type="button"
-								class="tab has-tooltip"
-								data-term="116"
-								aria-describedby="tab-tip-116"							>
+								class="tab"
+								data-term="116"							>
 								<span class="tab-text">Đồ chơi nhập khẩu Hàn Quốc</span>
-																	<span
-										id="tab-tip-116"
-										class="feature-info__bubble tab-tooltip"
-										role="tooltip"
-									>
-										Đồ chơi nhập khẩu Hàn Quốc — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
 															</button></h3>
 													<h3 class="tab-heading"><button
 								type="button"
-								class="tab has-tooltip"
-								data-term="115"
-								aria-describedby="tab-tip-115"							>
+								class="tab"
+								data-term="115"							>
 								<span class="tab-text">Đồ chơi nhập khẩu Nhật Bản</span>
-																	<span
-										id="tab-tip-115"
-										class="feature-info__bubble tab-tooltip"
-										role="tooltip"
-									>
-										Đồ chơi nhập khẩu Nhật Bản — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
 															</button></h3>
 													<h3 class="tab-heading"><button
 								type="button"
-								class="tab has-tooltip"
-								data-term="124"
-								aria-describedby="tab-tip-124"							>
+								class="tab"
+								data-term="124"							>
 								<span class="tab-text">Đồ chơi sáng tạo nhập khẩu</span>
-																	<span
-										id="tab-tip-124"
-										class="feature-info__bubble tab-tooltip"
-										role="tooltip"
-									>
-										Đồ chơi sáng tạo nhập khẩu — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
 															</button></h3>
 													<h3 class="tab-heading"><button
 								type="button"
-								class="tab has-tooltip"
-								data-term="119"
-								aria-describedby="tab-tip-119"							>
+								class="tab"
+								data-term="119"							>
 								<span class="tab-text">Đồ chơi STEM nhập khẩu</span>
-																	<span
-										id="tab-tip-119"
-										class="feature-info__bubble tab-tooltip"
-										role="tooltip"
-									>
-										Đồ chơi STEM nhập khẩu — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
 															</button></h3>
 													<h3 class="tab-heading"><button
 								type="button"
-								class="tab has-tooltip"
-								data-term="123"
-								aria-describedby="tab-tip-123"							>
+								class="tab"
+								data-term="123"							>
 								<span class="tab-text">Đồ chơi vận động nhập khẩu</span>
-																	<span
-										id="tab-tip-123"
-										class="feature-info__bubble tab-tooltip"
-										role="tooltip"
-									>
-										Đồ chơi vận động nhập khẩu — danh mục sản phẩm phù hợp trường mầm non. Xem chi tiết để chọn mẫu phù hợp ngân sách và không gian.									</span>
 															</button></h3>
 											</div>
 				</div>
