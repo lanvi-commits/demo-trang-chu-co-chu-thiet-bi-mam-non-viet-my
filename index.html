@@ -458,13 +458,14 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
      CSS của site đã nhúng (chụp 16/10). JS + ảnh tải từ website-demo-02 → cần mạng. -->
 <style id="vmx-scale" media="all">
 /* ==== THANG CỠ CHỮ ĐỀ XUẤT — Việt Mỹ (site THC, theme thcmedia-atlas) ====
-   8 bậc: 12 · 14 · 16 · 18 · 20 · 22 · 28 · 36   (20/10: user thay 24 bằng 22)    |   3 độ đậm: 400 · 600 · 700
+   Desktop 8 cỡ: 12 · 14 · 16 · 18 · 20 · 22 · 28 · 36  ·  Mobile 7 cỡ: 12 · 14 · 16 · 18 · 20 · 24 · 28
+   (20/10: user chỉ hạ H3 desktop 24 → 22; H2 mobile GIỮ 24)    |   3 độ đậm: 400 · 600 · 700
    Desktop ≥768px dùng giá trị trong :root, mobile <768px dùng khối @media.
    File này dùng !important để ÁP THỬ lên site thật. Khi làm thật: sửa thẳng các rule gốc
    trong CSS theme sang var(--fs-*), không cần !important.                                  */
 :root {
   --fs-h1: 36px;    /* H1 mọi trang                                     | mobile 28 */
-  --fs-h2: 28px;    /* H2 tiêu đề section (.title-thc), số liệu, giá PDP | mobile 22 */
+  --fs-h2: 28px;    /* H2 tiêu đề section (.title-thc), số liệu, giá PDP | mobile 24 */
   --fs-h3: 22px;    /* tên dự án, H1 trang SP, H2 trong bài viết, panel  | mobile 20 */
   --fs-h4: 20px;    /* H3 trong bài viết, tiêu đề card lớn (2–3 card/hàng)| mobile 18 */
   --fs-title: 18px; /* tiêu đề card, tên người, câu hỏi FAQ              | mobile 16 */
@@ -475,7 +476,7 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
   --c-text: #111927;   /* 1 màu cho heading + chữ chính (thay #0A1D3B, #00194C, #000) */
 }
 @media (max-width: 767px) {
-  :root { --fs-h1: 28px; --fs-h2: 22px; --fs-h3: 20px; --fs-h4: 18px; --fs-title: 16px; }
+  :root { --fs-h1: 28px; --fs-h2: 24px; --fs-h3: 20px; --fs-h4: 18px; --fs-title: 16px; }
 }
 
 /* ---------- 1. Heading ---------- */
@@ -7895,7 +7896,7 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
     <details>
       <summary>Ghi chú</summary>
       <ul>
-        <li>Thang 8 cỡ: 12 · 14 · 16 · 18 · 20 · 22 · 28 · 36. Mobile lùi 1 bậc. Chip xanh = đúng thang, đỏ = ngoài thang.</li>
+        <li>Thang desktop: 12 · 14 · 16 · 18 · 20 · 22 · 28 · 36. Mobile: 12 · 14 · 16 · 18 · 20 · 24 · 28. Chip xanh = đúng thang, đỏ = ngoài thang.</li>
         <li>"Đề xuất" đổi chữ tiêu đề hero và slogan theo dòng 29 tab Review tổng thể (bỏ "tốt nhất:", bỏ "nhất").</li>
         <li>CSS của site chụp ngày 16/10/2026. Ảnh và JS tải từ website-demo-02 nên cần mạng.</li>
         <li>"Xem nhanh", "Thêm vào báo giá" cần máy chủ nên không chạy trong file này.</li>
@@ -7919,7 +7920,8 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
   var scale = document.getElementById('vmx-scale');
   var panel = document.getElementById('vmx-panel');
   var KEY = 'vmx-type-mode';
-  var SCALE = [12, 14, 16, 18, 20, 22, 28, 36];
+  // thang theo khổ (20/10: H3 desktop 22, H2 mobile 24)
+  function scale() { return innerWidth < 768 ? [12, 14, 16, 18, 20, 24, 28] : [12, 14, 16, 18, 20, 22, 28, 36]; }
   var hash = location.hash || '';
   var inFrame = hash.indexOf('#vmx-frame') === 0 || window.self !== window.top;
   if (inFrame) root.classList.add('vmx-in-frame');
@@ -7980,7 +7982,7 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
       sizes[fs] = (sizes[fs] || 0) + 1;
     }
     var keys = Object.keys(sizes).map(Number).sort(function (a, b) { return a - b; });
-    return { sizes: sizes, keys: keys, off: keys.filter(function (k) { return SCALE.indexOf(k) < 0; }) };
+    return { sizes: sizes, keys: keys, off: keys.filter(function (k) { return scale().indexOf(k) < 0; }) };
   }
   function summary(r) { return r.keys.length + ' cỡ chữ · ' + (r.off.length ? r.off.length + ' cỡ ngoài thang (' + r.off.join(', ') + 'px)' : 'tất cả đúng thang'); }
   function count() {
@@ -8007,7 +8009,7 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
   function tokenName(px) {
     var mob = innerWidth < 768;
     var d = { 36: 'H1', 28: 'H2', 22: 'H3', 20: 'H4', 18: 'Tiêu đề card', 16: 'Thường', 14: 'Nhỏ', 12: 'Nhỏ nhất' };
-    var mm = { 28: 'H1', 22: 'H2', 20: 'H3', 18: 'H4', 16: 'Tiêu đề card · Thường', 14: 'Nhỏ', 12: 'Nhỏ nhất' };
+    var mm = { 28: 'H1', 24: 'H2', 20: 'H3', 18: 'H4', 16: 'Tiêu đề card · Thường', 14: 'Nhỏ', 12: 'Nhỏ nhất' };
     return (mob ? mm : d)[px] || '';
   }
   function textTarget(el) {
@@ -8029,8 +8031,8 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
       tip.textContent = '';
       tip.appendChild(document.createTextNode(px + 'px · đậm ' + cs.fontWeight + ' · lh ' + lh + ' '));
       var s = document.createElement('span');
-      s.className = SCALE.indexOf(px) > -1 ? 'vmx-tok' : 'vmx-bad';
-      s.textContent = SCALE.indexOf(px) > -1 ? '· ' + tok : '· ngoài thang';
+      s.className = scale().indexOf(px) > -1 ? 'vmx-tok' : 'vmx-bad';
+      s.textContent = scale().indexOf(px) > -1 ? '· ' + tok : '· ngoài thang';
       tip.appendChild(s);
       var r = el.getBoundingClientRect();
       boxEl.style.left = r.left + 'px'; boxEl.style.top = r.top + 'px'; boxEl.style.width = r.width + 'px'; boxEl.style.height = r.height + 'px';
