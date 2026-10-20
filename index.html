@@ -486,7 +486,8 @@ h1.title-thc, #hero_catalog_banner .titles .title-thc
 h2.title-thc { font-size: var(--fs-h2) !important; font-weight: 700 !important; line-height: var(--lh-heading) !important; }
 h1.product-title { font-size: var(--fs-h3) !important; font-weight: 700 !important; line-height: 1.3 !important; }
 h2.panel-title { font-size: var(--fs-h3) !important; font-weight: 700 !important; }
-.card-project .card-title { font-size: var(--fs-h3) !important; font-weight: 700 !important; line-height: 1.3 !important; }   /* tên dự án là thẻ <h3> → 22 desktop / 18 mobile (user chốt 20/10); card dùng chung: trang chủ, Giới thiệu, Dự án, chi tiết dự án */
+/* thẻ <h3> tên dự án + tên bài viết khối Kiến thức: 20 desktop / 16 mobile (user chốt 20/10) — KHÔNG theo token H3 */
+.card-project .card-title, .knowledge_posts .post-title { font-size: var(--fs-h4) !important; font-weight: 700 !important; line-height: 1.35 !important; }   /* card dùng chung: trang chủ, Giới thiệu, Dự án, chi tiết dự án */
 h3.panel-title, h2.form-title { font-size: var(--fs-h4) !important; font-weight: 700 !important; }
 .entry-content h2, #ftwp-postcontent h2 { font-size: var(--fs-h3) !important; font-weight: 700 !important; line-height: 1.3 !important; }
 .entry-content h3, #ftwp-postcontent h3 { font-size: var(--fs-h4) !important; font-weight: 700 !important; line-height: 1.35 !important; }
@@ -505,11 +506,11 @@ h1, h2, h3 { text-wrap: balance; }   /* tránh 1 chữ rơi xuống dòng cuối
 
 /* ---------- 3. Tiêu đề card ---------- */
 #shop_category_groups .card .label, .card-title-link .title-post, .standards_promo .card-title,
-#about_intro .item-title, .card-employee .name, .customer_testimonials .name, .project_reviews .name, .knowledge_posts .item--row .post-title,
+#about_intro .item-title, .card-employee .name, .customer_testimonials .name, .project_reviews .name,
 .faq-item .question, .exp-title, article.member h3.name, article.commit h3.name, .steps .name, .project_products .card-title,
 #equipment_banner .subtitle, .estimate-title, .author-box__name
   { font-size: var(--fs-title) !important; line-height: var(--lh-title) !important; font-weight: 700 !important; }
-.knowledge_posts .item--featured .post-title, #blog-featured .card-post:first-child .title-post,
+#blog-featured .card-post:first-child .title-post,
 .about_vision_mission .card-title, .about_core_values .card-title, .member-card .card-title, #about_why_choose .item-title,
 #about_process .item-title, .project_reviews .quote
   { font-size: var(--fs-h4) !important; line-height: 1.35 !important; font-weight: 700 !important; }
@@ -525,7 +526,7 @@ h1, h2, h3 { text-wrap: balance; }   /* tránh 1 chữ rơi xuống dòng cuối
 .product-card .price, .product-card .price * { font-size: var(--fs-sm) !important; line-height: 1.45 !important; }
 .product-card .actions button, .product-card .actions button span { font-size: var(--fs-sm) !important; }
 @media (max-width: 767px) {
-  .card-project .card-title { font-size: var(--fs-h4) !important; }   /* tên dự án mobile 18 (H3 mobile là 20) */
+  .card-project .card-title, .knowledge_posts .post-title { font-size: var(--fs-title) !important; }   /* tên dự án + tên bài viết mobile 16 */
   .product-card .actions button, .product-card .actions button span { font-size: var(--fs-xs) !important; }
   /* nút đứng cặp đôi ở trang SP: cả 4 nút cùng 14 trên mobile (hiện 2 nút 14, 2 nút 16) */
   .cart-buttons button, .cart-buttons button span, .project-actions a, .project-actions button, .project-actions span { font-size: var(--fs-sm) !important; }
@@ -7921,7 +7922,7 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
   var panel = document.getElementById('vmx-panel');
   var KEY = 'vmx-type-mode';
   // thang theo khổ (20/10: H3 desktop 22, H2 mobile 24)
-  function scale() { return innerWidth < 768 ? [12, 14, 16, 18, 20, 24, 28] : [12, 14, 16, 18, 20, 22, 28, 36]; }
+  function vmxScale() { return innerWidth < 768 ? [12, 14, 16, 18, 20, 24, 28] : [12, 14, 16, 18, 20, 22, 28, 36]; }
   var hash = location.hash || '';
   var inFrame = hash.indexOf('#vmx-frame') === 0 || window.self !== window.top;
   if (inFrame) root.classList.add('vmx-in-frame');
@@ -7982,7 +7983,7 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
       sizes[fs] = (sizes[fs] || 0) + 1;
     }
     var keys = Object.keys(sizes).map(Number).sort(function (a, b) { return a - b; });
-    return { sizes: sizes, keys: keys, off: keys.filter(function (k) { return scale().indexOf(k) < 0; }) };
+    return { sizes: sizes, keys: keys, off: keys.filter(function (k) { return vmxScale().indexOf(k) < 0; }) };
   }
   function summary(r) { return r.keys.length + ' cỡ chữ · ' + (r.off.length ? r.off.length + ' cỡ ngoài thang (' + r.off.join(', ') + 'px)' : 'tất cả đúng thang'); }
   function count() {
@@ -8031,8 +8032,8 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
       tip.textContent = '';
       tip.appendChild(document.createTextNode(px + 'px · đậm ' + cs.fontWeight + ' · lh ' + lh + ' '));
       var s = document.createElement('span');
-      s.className = scale().indexOf(px) > -1 ? 'vmx-tok' : 'vmx-bad';
-      s.textContent = scale().indexOf(px) > -1 ? '· ' + tok : '· ngoài thang';
+      s.className = vmxScale().indexOf(px) > -1 ? 'vmx-tok' : 'vmx-bad';
+      s.textContent = vmxScale().indexOf(px) > -1 ? '· ' + tok : '· ngoài thang';
       tip.appendChild(s);
       var r = el.getBoundingClientRect();
       boxEl.style.left = r.left + 'px'; boxEl.style.top = r.top + 'px'; boxEl.style.width = r.width + 'px'; boxEl.style.height = r.height + 'px';
