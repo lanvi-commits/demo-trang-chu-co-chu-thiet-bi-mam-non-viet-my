@@ -455,16 +455,17 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 .consult-dialog .form-row--3 .form-field,.consult-dialog .form-row--2 .form-field{flex:1 1 100%;max-width:100%}
 </style>
 <style id="vmx-sticky">
-/* Thanh liên hệ nổi trên mobile — ĐỀ XUẤT 21/10/2026 (user chốt: giữ Messenger, không thêm nút báo giá, có chữ dưới icon).
+/* Thanh liên hệ nổi trên mobile — ĐỀ XUẤT 21/10/2026 (user chốt: giữ Messenger, không thêm nút báo giá, chỉ icon — không chữ dưới).
    Đè lên style-sticky-contact.css của site, chỉ trong khổ ≤1100px (khổ site đổi sang thanh ngang). Desktop giữ nguyên.
    Kèm 1 sửa ở HTML (build.py làm): nút Messenger trỏ https://m.me/dochoithietbimamnonvietmy thay vì trang fanpage.
-   1. Nút 40 → 44px, mỗi kênh tô màu riêng (Zalo xanh · Gọi điện đỏ · Messenger xanh) để thanh không chìm vào nền trắng.
-   2. Hiện chữ 12px dưới icon (site đang ẩn .label trên mobile) → bỏ 2 vạch ngăn, khoảng cách giữa nút thay vạch.
-   3. Nút lên đầu trang: đỏ đặc → nền trắng, mũi tên xám — không còn là chỗ nổi nhất cuối màn hình.
-   4. Thanh cao hơn (52 → 74px) → đẩy panel danh sách tư vấn viên lên + body chừa đáy 44 → 92px (responsive.css của site) để không che copyright. */
+   1. Nút 40 → 44px, mỗi kênh tô màu riêng (Gọi điện đỏ · Messenger xanh) để thanh không chìm vào nền trắng; bỏ 2 vạch ngăn.
+   2. Zalo: chữ "Zalo" → biểu tượng Zalo. Dùng lại file của theme (khối Tư vấn viên đang dùng):
+      assets/images/consultant-team/icons/zalo-v2.svg — trong CSS theme viết ../images/consultant-team/icons/zalo-v2.svg
+      Đặt trên nền tròn xanh Zalo cho cùng dạng 2 nút kia (logo này phần lớn là bong bóng trắng — để trần trên thanh trắng thì chìm).
+      Khi mở danh sách Zalo, logo đổi thành dấu X trắng như nút Gọi điện.
+   3. Nút lên đầu trang: đỏ đặc → nền trắng, mũi tên xám — không còn là chỗ nổi nhất cuối màn hình. */
 @media (max-width: 1100px) {
-  #sticky-contact.sticky-contact .list { gap: 4px; padding: 6px 8px 5px; border-radius: 20px; }
-  #sticky-contact.sticky-contact .item:not(.item--top) { flex-direction: column; gap: 3px; min-width: 64px; padding: 0 2px; }
+  #sticky-contact.sticky-contact .list { gap: 10px; padding: 6px 10px; }
   #sticky-contact.sticky-contact .item--phone::before,
   #sticky-contact.sticky-contact .item--messenger::before { display: none; }
 
@@ -472,18 +473,16 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
   #sticky-contact.sticky-contact .icon { width: 44px; height: 44px; color: #ffffff; }
   #sticky-contact.sticky-contact .item--phone .icon { border: 0; background: var(--primary_color, #d71010); color: #ffffff; font-size: 18px; }
   #sticky-contact.sticky-contact .item--messenger .icon { border: 0; background: #0084ff; color: #ffffff; font-size: 20px; }
-  #sticky-contact.sticky-contact .icon--zalo { width: 44px; height: 44px; border: 0; background: #0068ff; box-shadow: none; }
-  #sticky-contact.sticky-contact .icon--zalo .icon-main::before { color: #ffffff; font-size: 12px; line-height: 44px; }
   #sticky-contact.sticky-contact .icon .icon-close { color: #ffffff; }
 
-  #sticky-contact.sticky-contact .item:not(.item--top) .label { display: block; font-size: 12px; font-weight: 600; line-height: 16px; color: #374151; white-space: nowrap; }
+  #sticky-contact.sticky-contact .icon--zalo { width: 44px; height: 44px; border: 0; border-radius: 50%; background: #0068ff; box-shadow: none; }
+  #sticky-contact.sticky-contact .icon--zalo .icon-main { display: block; width: 44px; height: 44px;
+    background: url("https://website-demo-02.thcmedia.vn/wp-content/themes/thcmedia-atlas/assets/images/consultant-team/icons/zalo-v2.svg") center / 30px 30px no-repeat; }
+  #sticky-contact.sticky-contact .icon--zalo .icon-main::before { content: none; }
 
   #sticky-contact.sticky-contact .item--top { width: 44px; height: 44px; border: 1px solid #e5e7eb; background: #ffffff; }
   #sticky-contact.sticky-contact .item--top .icon,
   #sticky-contact.sticky-contact .item--top .icon i { color: #374151; }
-
-  #sticky-contact.sticky-contact .panel { bottom: calc(100px + env(safe-area-inset-bottom, 0px)); }
-  body { padding-bottom: calc(92px + env(safe-area-inset-bottom, 0px)); }
 }
 </style>
 <style id="vmx-seo">
